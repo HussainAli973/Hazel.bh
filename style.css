@@ -11,6 +11,7 @@
   font-weight: 200; 
   font-style: normal;
 }
+
 /* Headers & Titles (Boiller Normal) */
 h1, h2, h3, h4, h5, h6, 
 .title, .header {
@@ -94,10 +95,8 @@ body, p, a, li, .text {
     transform: translateY(-5px) rotate(360deg);
   }
   
-  
-  /* ===== LUXURY NAVIGATION ===== */
-/* ===== Header & Navigation ===== */
 
+  /*  The Header & Navigation  */
 .header {
   position: fixed;
   top: 0;
@@ -135,7 +134,7 @@ body, p, a, li, .text {
   opacity: 0.8;
 }
 
-/* ===== Navigation Menu ===== */
+/*  Navigation Menu  */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -144,7 +143,7 @@ body, p, a, li, .text {
 }
 
 .nav-item {
-  margin-left: 30px; /* Reduced from 40px */
+  margin-left: 30px;
   position: relative;
 }
 
@@ -182,14 +181,14 @@ body, p, a, li, .text {
   width: 100%;
 }
 
-/* ===== Hamburger Menu ===== */
+/*  Hamburger Menu For Small Screens */
 .hamburger {
   display: none;
   cursor: pointer;
   background: transparent;
   border: none;
   padding: 10px;
-  margin-left: 15px; /* Reduced from 20px */
+  margin-left: 15px; 
   z-index: 1001;
 }
 
@@ -215,28 +214,26 @@ body, p, a, li, .text {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===== Responsive Breakpoints ===== */
-
-/* Tablet (768px - 992px) */
+/* Tablet Size(768px - 992px) */
 @media (max-width: 992px) {
   .navbar {
-    padding: 0 15px; /* Reduced from 20px */
+    padding: 0 15px; 
   }
   
   .nav-item {
-    margin-left: 25px; /* Reduced from 30px */
+    margin-left: 25px; 
   }
   
   .nav-link {
     font-size: 0.9rem;
   }
   
-  /* Show hamburger menu */
+  /* Show Hamburger Menu */
   .hamburger {
     display: block;
   }
   
-  /* Hide regular menu */
+  /* Hide Regular Menu */
   .nav-menu {
     position: fixed;
     top: 0;
@@ -270,7 +267,7 @@ body, p, a, li, .text {
     transform: translateX(0);
   }
   
-  /* Staggered animation delays */
+  /* Staggered Animation Delays */
   .nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
   .nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.15s; }
   .nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.2s; }
@@ -285,10 +282,10 @@ body, p, a, li, .text {
   }
 }
 
-/* Mobile (up to 767px) */
+/* Mobile Size (up to 767px) */
 @media (max-width: 767px) {
   .navbar {
-    padding: 0 10px; /* Reduced from 15px */
+    padding: 0 10px; 
   }
   
   .navbar .logo img {
@@ -306,10 +303,10 @@ body, p, a, li, .text {
     font-size: 1rem;
   }
   
-  /* Adjust hamburger size */
+  /* Adjust Hamburger Size */
   .hamburger {
     padding: 8px;
-    margin-left: 5px; /* Reduced from 10px */
+    margin-left: 5px; 
   }
   
   .hamburger .bar {
@@ -327,19 +324,19 @@ body, p, a, li, .text {
   }
 }
 
-/* Small Mobile (up to 480px) */
+/* Small Mobile Size(up to 480px) */
 @media (max-width: 480px) {
   .header {
     padding: 12px 0;
   }
   
   .navbar {
-    padding: 0 5px; /* Minimal padding */
+    padding: 0 5px; /* Minimal Padding */
   }
   
   .navbar .logo img {
     max-width: 90px;
-    margin-left: -10px; /* Maximum pull to the left */
+    margin-left: -10px; /* Maximum Pull To The Left */
   }
   
   .nav-menu {
@@ -352,24 +349,23 @@ body, p, a, li, .text {
   }
   
   .hamburger {
-    margin-left: 0; /* No margin on smallest screens */
+    margin-left: 0; 
   }
 }
   
 
-  /* ===== Accessibility ===== */
+  /*  Accessibility  */
   .hamburger:focus-visible,
   .nav-link:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 4px;
   }
-  /* ===== LUXURY HERO SECTION ===== */
 
-/* Hero Section Base Styles */
+/* Hero Section */
 .hero {
   height: 100vh;
-  min-height: 600px; /* Reduced from 800px for better mobile */
-  max-height: 1000px; /* Reduced from 1200px */
+  min-height: 600px; 
+  max-height: 1000px; 
   width: 100%;
   position: relative;
   display: flex;
@@ -419,22 +415,22 @@ body, p, a, li, .text {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4rem); /* Adjusted sizes */
-  margin-bottom: 1rem; /* Reduced */
+  font-size: clamp(2.5rem, 6vw, 4rem); 
+  margin-bottom: 1rem; 
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
   font-family: var(--font-decorative);
   font-weight: 300;
-  letter-spacing: 1px; /* Reduced */
+  letter-spacing: 1px; 
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem); /* Adjusted sizes */
-  margin-bottom: 2rem; /* Reduced */
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem); 
+  margin-bottom: 2rem; 
   font-weight: 300;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  line-height: 1.5; /* Adjusted */
-  max-width: 90%; /* More responsive */
+  line-height: 1.5;
+  max-width: 90%; /* More Responsive */
   margin-left: auto;
   margin-right: auto;
 }
@@ -442,11 +438,11 @@ body, p, a, li, .text {
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem; /* Reduced */
+  gap: 1rem; 
   flex-wrap: wrap;
 }
 
-/* Tablet Styles (matches menu breakpoint at 768px) */
+/* Tablet Size (matches menu breakpoint at 768px) */
 @media (max-width: 768px) {
   .hero {
       min-height: 500px;
@@ -472,7 +468,7 @@ body, p, a, li, .text {
   }
 }
 
-/* Phone Styles (matches menu breakpoint at 480px) */
+/* Phone Size (matches menu breakpoint at 480px) */
 @media (max-width: 480px) {
   .hero {
       min-height: 400px;
@@ -500,7 +496,7 @@ body, p, a, li, .text {
   }
 }
 
-/* Small Phone Styles (matches menu breakpoint at 360px) */
+/* Small Phone Size (matches menu breakpoint at 360px) */
 @media (max-width: 360px) {
   .hero {
       min-height: 350px;
@@ -525,10 +521,13 @@ body, p, a, li, .text {
       max-width: 250px;
   }
 }
+
+
 /* Scroll Down Arrow Component */
+
 .scroll-down {
     position: absolute;
-    bottom: 40px; /* default position, adjusted, was 60px */
+    bottom: 40px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -572,6 +571,7 @@ body, p, a, li, .text {
 }
 
 /* Animations */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -589,8 +589,7 @@ body, p, a, li, .text {
     }
 }
 
-/* Responsive Breakpoints */
-/* Desktop (1024px and up) */
+/* Desktop Size (1024px and up) */
 @media (min-width: 1024px) {
     .scroll-down {
         bottom: 100px;
@@ -605,7 +604,7 @@ body, p, a, li, .text {
     }
 }
 
-/* Tablet (768px - 1023px) */
+/* Tablet Size (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .scroll-down {
         bottom: 80px;
@@ -620,7 +619,7 @@ body, p, a, li, .text {
     }
 }
 
-/* Mobile (up to 767px) */
+/* Mobile Size (up to 767px) */
 @media (max-width: 767px) {
     .scroll-down {
         bottom: 60px;
@@ -642,7 +641,7 @@ body, p, a, li, .text {
     }
 }
 
-  /*  CONTENT COLUMNS (Responsive Column Layout) */
+  /*  Content Coulumns (Responsive Column Layout) */
 
   .content-area {
     /* Single column for mobile */
@@ -656,7 +655,7 @@ body, p, a, li, .text {
     }
   }
   
-  /*  IMAGE REFLECTIONS (Three Reflection Effects) */
+  /*  Image Reflections (Three Reflection Effects) */
 
   .reflective-image {
     -webkit-box-reflect: below 5px linear-gradient(transparent 60%, rgba(0,0,0,0.3));
@@ -675,13 +674,12 @@ body, p, a, li, .text {
                         rgba(0,0,0,0.2));
   }
   
-  /* Applied to team images */
+  /* Applied To Team Images */
   .team-img {
     -webkit-box-reflect: below 5px linear-gradient(transparent 60%, rgba(0,0,0,0.3));
   }
   
-  /*  BUTTONS & TRANSITIONS (Three Transition Applications) */
-
+  /*  Buttons & Transitions (Three Transition Applications) */
   .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -723,7 +721,7 @@ body, p, a, li, .text {
     transform: scale(1.02);
   }
   
-  /*  ANIMATIONS  */
+  /*  Animations */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -770,7 +768,7 @@ body, p, a, li, .text {
   padding-top: 5rem;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .section-title {
         font-size: 2rem;
@@ -785,7 +783,7 @@ body, p, a, li, .text {
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.75rem;
-        top: 25%; /* Adjust vertical position for mobile */
+        top: 25%; 
     }
 }
   
@@ -796,7 +794,7 @@ body, p, a, li, .text {
   }
 
   
-  /*  FEATURED SECTION  */
+  /*  Featured Section */
   .featured {
     padding: var(--section-padding);
     background: var(--bg-light);
@@ -847,7 +845,7 @@ body, p, a, li, .text {
   
  
   
-  /*  ABOUT PAGE  */
+  /*  About Page  */
   .page-hero {
     height: 500px;
     display: flex;
@@ -950,7 +948,7 @@ body, p, a, li, .text {
   }
   
   
-  /*  PHILOSOPHY SECTION*/
+  /*  Philosophy Section*/
   .philosophy {
     background: white;
     padding: var(--section-padding);
@@ -1047,7 +1045,7 @@ body, p, a, li, .text {
     color: rgba(255, 255, 255, 0.9);
   }
   
-  /*  TEAM SECTION */
+  /*  Team Section */
   .team-section {
     padding: var(--section-padding);
   }
@@ -1115,7 +1113,8 @@ body, p, a, li, .text {
     padding: 0 20px 20px;
     color: var(--text-light);
   }
-  /* CONTACT SECTION */
+
+  /* Contact Section */
   .contact-section {
     padding: var(--section-padding);
     background-color: #ffffff;
@@ -1210,7 +1209,7 @@ body, p, a, li, .text {
   color: #000;
 }
 
-/* Active states */
+/* Active States */
 .filter-dropdown.active .filter-options {
   display: block;
   opacity: 1;
@@ -1226,13 +1225,13 @@ body, p, a, li, .text {
   color: #333;
 }
 
-/* Focus state */
+/* Focus State */
 .filter-btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(120, 120, 120, 0.2);
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .events-filter {
       justify-content: center;
@@ -1329,7 +1328,7 @@ body, p, a, li, .text {
   .event-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    width: 100%; /* Ensure full width for proper centering */
+    width: 100%; 
   }
   
   .event-time {
@@ -1350,7 +1349,7 @@ body, p, a, li, .text {
   
   /* CTA Button Styling */
   .event-cta {
-    margin-top: auto; /* Push to bottom if using flex column */
+    margin-top: auto; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1390,8 +1389,7 @@ body, p, a, li, .text {
     }
   }
   
-  /*  RESERVATION SECTION  */
-  /* ===== Reservation Page Specific Styles ===== */
+  /*  Reservation Section */
 
 /* Hero Section */
 .page-hero {
@@ -1402,7 +1400,7 @@ body, p, a, li, .text {
     background-position: center;
     align-items: center;
     color: white;
-    margin-top: 80px; /* Account for fixed header */
+    margin-top: 80px;
   }
   
   .hero-overlay {
@@ -1437,8 +1435,8 @@ body, p, a, li, .text {
   }
   
   /* Main Reservation Section */
- /* ===== Luxury Reservation Section ===== */
-.reservation-section {
+
+  .reservation-section {
     padding: 6rem 0;
      position: relative;
   }
@@ -1563,7 +1561,7 @@ body, p, a, li, .text {
   box-shadow: 0 5px 20px rgba(183, 138, 90, 0.1);
 }
 
-/* Submit Button - Matching Existing CTA */
+/* Submit Button*/
 .btn-gold {
   position: relative;
   display: inline-flex;
@@ -1573,8 +1571,8 @@ body, p, a, li, .text {
   width: 100%;
   padding: 18px 28px;
   margin-top: 1.5rem;
-  background: var(--gold-gradient); /* Your existing gold gradient */
-  color: var(--primary-color); /* Dark text color */
+  background: var(--gold-gradient); 
+  color: var(--primary-color); 
   border: none;
   border-radius: 8px;
   font-size: 1.05rem;
@@ -1714,7 +1712,8 @@ body, p, a, li, .text {
   .btn-gold:hover i {
     transform: translateX(5px);
   }
-  /* Add to your existing CSS */
+
+  
 .spinner {
   display: inline-block;
   width: 20px;
@@ -1741,7 +1740,7 @@ body, p, a, li, .text {
   to { transform: rotate(360deg); }
 }
 
-/* Popup styles (customize as needed) */
+/* Popup Styles*/
 .reservation-popup .popup-content {
   background: white;
   padding: 2rem;
@@ -1976,7 +1975,7 @@ body, p, a, li, .text {
     font-weight: 400;
   }
   
-  /* Dining Options - Enhanced */
+  /* Dining Options */
 .dining-options {
     padding: 5rem 0;
     background: var(--bg-light);
@@ -2168,7 +2167,8 @@ body, p, a, li, .text {
       height: 200px;
     }
   }
-/* ===== Map Section ===== */
+
+/* Map Section */
 .map-section {
   position: relative;
   margin: 3rem 0;
@@ -2189,7 +2189,7 @@ body, p, a, li, .text {
   display: block;
 }
 
-/* ===== Map Overlay ===== */
+/*  Map Overlay */
 .map-overlay {
   position: absolute;
   bottom: 2rem;
@@ -2233,7 +2233,7 @@ body, p, a, li, .text {
   width: fit-content;
 }
 
-/* ===== Gold Button ===== */
+/* Gold Button */
 .btn-gold-outline {
   display: inline-flex;
   align-items: center;
@@ -2276,9 +2276,8 @@ body, p, a, li, .text {
   width: 100%;
 }
 
-/* ===== Responsive Breakpoints ===== */
 
-/* Tablet (768px and below) */
+/* Tablet Size (768px and below) */
 @media (max-width: 768px) {
   .map-container {
       height: 400px;
@@ -2306,7 +2305,7 @@ body, p, a, li, .text {
   }
 }
 
-/* Small Tablet (600px and below) - Optional intermediate breakpoint */
+/* Small Tablet Size (600px and below) */
 @media (max-width: 600px) {
   .map-container {
       height: 380px;
@@ -2318,23 +2317,25 @@ body, p, a, li, .text {
   }
 }
 
-/* Phone (480px and below) - Hide overlay */
+/* Phone Size(480px and below) */
 @media (max-width: 480px) {
   .map-container {
       height: 350px;
   }
   
   .map-overlay {
-      display: none; /* Hide overlay on phones */
+      display: none; 
   }
 }
 
-/* Small Phone (360px and below) */
+/* Small Phone Size (360px and below) */
 @media (max-width: 360px) {
   .map-container {
       height: 320px;
   }
 }
+
+
   /*  MENU SECTION  */
 
  /* Compact Promo Popup Styles */
@@ -2363,7 +2364,7 @@ body, p, a, li, .text {
   position: relative;
   background: #0a0a0a;
   width: 85%;
-  max-width: 400px; /* Reduced from 500px */
+  max-width: 400px; 
   border: 1px solid #d4af37;
   border-radius: 8px;
   overflow: hidden;
@@ -2409,8 +2410,8 @@ body, p, a, li, .text {
 
 .promo-image {
   width: 100%;
-  height: 180px; /* Fixed height */
-  object-fit: cover; /* Ensures image fills container */
+  height: 180px; 
+  object-fit: cover; 
 }
 
 .promo-text {
@@ -2664,7 +2665,7 @@ body, p, a, li, .text {
     border-radius: 5px;
 }
 
-/* Tablet Styles (768px and below) */
+/* Tablet Size (768px and below) */
 @media (max-width: 768px) {
     .menu-grid-layout {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2703,7 +2704,7 @@ body, p, a, li, .text {
     }
 }
 
-/* Phone Styles (480px and below) */
+/* Phone Size (480px and below) */
 @media (max-width: 480px) {
     .menu-grid-layout {
         grid-template-columns: 1fr;
@@ -2722,7 +2723,7 @@ body, p, a, li, .text {
     
     .menu-item img {
       height: 180px;
-      object-position: center 65%; /* Less adjustment for mobile */
+      object-position: center 65%; 
   }
     
     .menu-item-header {
@@ -2756,7 +2757,7 @@ body, p, a, li, .text {
     }
 }
 
-/* Small Phone Styles (360px and below) */
+/* Small Phone Size (360px and below) */
 @media (max-width: 360px) {
     .menu-item {
         padding: 12px;
@@ -2778,7 +2779,7 @@ body, p, a, li, .text {
         font-size: 1.3rem;
     }
 }
-  /*  LIGHTBOX STYLES  */
+  /*  Lightbox Styles  */
   #lightbox {
     position: fixed;
     top: 0;
@@ -2804,9 +2805,9 @@ body, p, a, li, .text {
     width: 100%;
     height: 70vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
+    align-items: center; /* Vertical Centering */
+    justify-content: center; /* Horizontal centering */
+    background-color: #000; /* Pure Black Background */
   }
   
   .lightbox-img {
@@ -2814,15 +2815,14 @@ body, p, a, li, .text {
     max-height: 100%;
     object-fit: contain;
     border-radius: 4px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5); /* Depth Effect */
   }
   
   .lightbox-caption {
-    color: #fff;
+    color: #fff;  /* White Text */
     font-size: 1.2rem;
     margin-top: 15px;
     padding: 0 20px;
-    font-family: 'Arial', sans-serif;
   }
   
   .close {
@@ -2878,7 +2878,7 @@ body, p, a, li, .text {
     transform: scale(1.1);
   }
   
-  /*  FOOTER */
+  /*  Footer Section */
   .footer {
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -2920,7 +2920,9 @@ body, p, a, li, .text {
     font-size: 0.9rem;
     opacity: 0.7;
   }
-  /* ===== Footer Social Links ===== */
+
+
+  /*  Footer Social Links  */
   .social-links {
     display: flex;
     gap: 28px;
@@ -2950,8 +2952,8 @@ body, p, a, li, .text {
 /* Hover Effects for Social Links */
 .social-links a:hover {
     transform: translateY(-5px) scale(1.05);
-    background: rgba(183, 138, 90, 0.15); /* Gold tint */
-    box-shadow: 0 8px 20px rgba(183, 138, 90, 0.2); /* Gold glow */
+    background: rgba(183, 138, 90, 0.15); /* Gold Tint */
+    box-shadow: 0 8px 20px rgba(183, 138, 90, 0.2); /* Gold Glow */
     border-color: rgba(183, 138, 90, 0.6);
 }
 
@@ -2962,29 +2964,29 @@ body, p, a, li, .text {
 
 /* Hover Effects for Contact Links */
 .footer-col a {
-    color: var(--accent-color); /* Default color for links */
+    color: var(--accent-color); 
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth Transition */
 }
 
-/* Hover effect for phone number link */
+/* Hover Effect For Phone Number Link */
 .footer-col a[href^="tel:"]:hover {
-    color: var( --secondary-color); /* Change to a different color on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    color: var( --secondary-color); /* Change To A Different Color On Hover */
+    transform: scale(1.05); 
 }
 
 /* Hover effect for email link */
 .footer-col a[href^="mailto:"]:hover {
-    color: var( --secondary-color); /* Change to a different color on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    color: var( --secondary-color); /* Change To A Different Color On Hover */
+    transform: scale(1.05);
 }
 
-/* Optional: Add an underline on hover for contact links */
 .footer-col a:hover {
     text-decoration: underline;
 }
 
 /* Platform-Specific Gold Accents for Social Links */
+
 .social-links a[href*="instagram.com"]:hover {
     background: rgba(183, 138, 90, 0.2);
     box-shadow: 0 8px 20px rgba(183, 138, 90, 0.3);
@@ -3015,7 +3017,7 @@ body, p, a, li, .text {
     }
 }
 
-  /*  RESPONSIVE ADJUSTMENTS  */
+  /*  Responsive Adjustments  */
   @media (min-width:834px ) and (max-width:1193px) {
     .about-grid,
     .reservation-grid {
@@ -3035,6 +3037,7 @@ body, p, a, li, .text {
       font-size: 3rem;
     }
   }
+
   /* Full HD Resluotion */
   @media (min-width: 1920px) and (max-width: 2559px) {
 
@@ -3064,6 +3067,7 @@ body, p, a, li, .text {
       width: 28rem;
     }
   }
+
   /* 2K reselution */
   @media  (min-width: 2560px) {
 
@@ -3116,7 +3120,7 @@ body, p, a, li, .text {
   }
 
   .about-img {
-    order: -1; /* Forces image to appear first */
+    order: -1; 
     width: 100%;
     max-width: 100%; /* Full width on mobile */
     margin: 0;
@@ -3124,8 +3128,8 @@ body, p, a, li, .text {
   }
 
   .about-text {
-    padding: 20px 15px; /* Add spacing below image */
-    text-align: center; /* Optional: center text */
+    padding: 20px 15px; 
+    text-align: center; /* Center Text */
   }
     
     .btn-primary {
@@ -3221,80 +3225,8 @@ body, p, a, li, .text {
       right: 10px;
     }
   }
-  /* Culinary Theme Audio Player */
-.culinary-theme {
-  background-color: #fff9f5;
-  border-radius: 4px;
-  padding: 18px 22px;
-  margin: 25px 0;
-  border-left: 4px solid #c8a97e;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  max-width: 100%;
-  font-family: 'Georgia', serif;
-}
 
-.culinary-theme .audio-description {
-  margin: 0 0 12px 0;
-  font-size: 0.95rem;
-  color: #5a4a3a;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-}
-
-.culinary-theme .audio-player-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.culinary-theme audio {
-  width: 100%;
-  min-height: 40px;
-  filter: sepia(20%) saturate(70%) brightness(0.9);
-}
-
-.culinary-theme audio::-webkit-media-controls-panel {
-  background-color: #f8f4ee;
-  border-radius: 2px;
-}
-
-.culinary-theme audio::-webkit-media-controls-play-button,
-.culinary-theme audio::-webkit-media-controls-mute-button {
-  background-color: #c8a97e;
-  border-radius: 50%;
-}
-
-.culinary-theme .audio-info {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.culinary-theme .audio-time {
-  font-size: 0.85rem;
-  color: #7a6b5a;
-  font-family: 'Helvetica', sans-serif;
-}
-
-.culinary-theme .audio-download-btn {
-  background-color: transparent;
-  color: #c8a97e;
-  border: 1px solid #c8a97e;
-  padding: 6px 12px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-  font-family: 'Helvetica', sans-serif;
-  letter-spacing: 0.3px;
-}
-
-.culinary-theme .audio-download-btn:hover {
-  background-color: #c8a97e;
-  color: white;
-}
-
+ 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .culinary-theme {
@@ -3302,18 +3234,18 @@ body, p, a, li, .text {
       margin: 1.2rem 0;
   }
   
-  .culinary-theme .audio-controls {
+  .culinary-theme {
       flex-wrap: wrap;
       gap: 0.6rem;
   }
   
-  .culinary-theme .audio-time {
+  .culinary-theme {
       order: 1;
       flex: 1 1 100%;
       text-align: left;
   }
   
-  .culinary-theme .audio-download-btn {
+  .culinary-theme  {
       order: 2;
       padding: 0.5rem;
       flex-grow: 1;
@@ -3321,7 +3253,7 @@ body, p, a, li, .text {
   }
 }
 
-/* iPhone-specific optimizations */
+/* iPhone Specific Optimizations */
 @media (max-width: 480px) {
   .culinary-theme .download-text {
       display: none;
@@ -3337,7 +3269,7 @@ body, p, a, li, .text {
   }
 }
 
-/* Safari/iOS specific fixes */
+/* Safari/iOS Specific Fixes */
 @supports (-webkit-touch-callout: none) {
   .culinary-theme audio {
       height: 3rem;
@@ -3345,48 +3277,31 @@ body, p, a, li, .text {
 }
 
 
-
-/* Ensure section title is visible after scroll-down arrow click on homepage */
+/* Ensure Section Title Is Visible After Scroll-down Arrow Click On Homepage */
 .featured {
-  scroll-margin-top: 100px; /* Adjust as needed based on fixed header height */
+  scroll-margin-top: 100px; 
 }
 
 
 
-/* Footer adjustments for clarity and large screens */
+/* Footer Adjustments For Clarity And Large Screens */
 .footer-bottom {
   text-align: center;
-  padding: 20px 15px; /* Consistent padding */
-  /* Assuming a dark theme based on header, adjust if needed */
+  padding: 20px 15px; /* Consistent Padding */
   border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 30px; /* Space above copyright */
-  max-width: 1200px; /* Align with general container width by default */
+  margin-top: 30px; /* Space Above Copyright */
+  max-width: 1200px; 
   margin-left: auto;
   margin-right: auto;
-  width: 90%; /* Consistent with .container behavior */
-  color: var(--text-light); /* Ensure text color is appropriate */
+  width: 90%;
+  color: var(--text-light); 
 }
 
-/* Responsive adjustments for footer on very large screens */
-@media (min-width: 1920px) { /* For 2K screens and wider */
-  .footer .container, /* Widen the main footer content area */
-  .footer-bottom {    /* Widen the copyright area to match */
-    max-width: 1500px; /* Increased max-width for better layout on 2k screens */
+/* Responsive Adjustments */
+
+@media (min-width: 1920px) { /* For 2K Screens And Wider */
+  .footer .container, /* Widen The Main Footer Content Area */
+  .footer-bottom {    /* Widen The Copyright Area To Match */
+    max-width: 1500px; /* Increased Max-width For Better Layout On 2k Screens */
   }
 }
-
-/* Additional rule to ensure footer columns behave well on larger screens if using grid */
-/* This is a general enhancement and might need tuning based on specific .footer-grid definition */
-@media (min-width: 992px) { /* Apply from larger desktop screens */
-  .footer-grid {
-    /* If using CSS Grid and want to prevent columns from becoming too wide */
-    /* Example: if grid-template-columns is 'repeat(auto-fit, minmax(220px, 1fr))' */
-    /* On very wide containers (like 1500px), 1fr might make columns too wide. */
-    /* One option is to cap the 1fr or change the number of columns. */
-    /* For now, assuming the existing auto-fit with a wider container is the primary fix. */
-    /* If columns are still too wide, could adjust like: */
-    /* grid-template-columns: repeat(auto-fill, minmax(220px, 300px)); */
-    /* justify-content: center; */
-  }
-}
-
